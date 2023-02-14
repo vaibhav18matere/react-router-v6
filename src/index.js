@@ -4,6 +4,8 @@ import "./index.css";
 // import App from "./App";
 import Home from "./components/Home";
 import Projects from "./components/Projects";
+import Webdev from "./components/Webdev";
+import Crypto from "./components/Crypto";
 import reportWebVitals from "./reportWebVitals";
 
 import {
@@ -19,11 +21,14 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
         <Route
           path="/my-projects"
           element={<Navigate replace to="/projects" />}
         />
+        <Route path="projects" element={<Projects />}>
+          <Route path="webdev" element={<Webdev />} />
+          <Route path="crypto" element={<Crypto />} />
+        </Route>
       </Routes>
     </Router>
   </React.StrictMode>
