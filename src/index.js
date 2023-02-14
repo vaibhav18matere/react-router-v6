@@ -27,9 +27,10 @@ root.render(
           element={<Navigate replace to="/projects" />}
         />
         <Route path="projects" element={<Projects />}>
-          <Route path="webdev" element={<Webdev />} />
+          <Route path="webdev" element={<Webdev />}>
+            <Route path=":id" element={<SingleProject />} />
+          </Route>
           <Route path="crypto" element={<Crypto />} />
-          <Route path=":id" element={<SingleProject />} />
         </Route>
       </Routes>
     </Router>
