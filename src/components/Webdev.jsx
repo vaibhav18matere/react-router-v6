@@ -19,10 +19,29 @@ const Webdev = () => {
       <h3>FullStack Projects </h3>
       <div> All the WEBDEV Projects are listed here</div>
       <p>Checking for Navlink</p>
-      <NavLink to={`/projects/webdev/${randomProjectName}`}>
+      <NavLink
+        style={({ isActive }) => {
+          return {
+            backgroundColor: isActive ? "blue" : "white",
+            color: isActive ? "white" : "black",
+          };
+        }}
+        to={`/projects/webdev/${randomProjectName}`}
+      >
         {randomProjectName} |
       </NavLink>
-      <NavLink to={`/projects/webdev/test-project`}> Test Project</NavLink>
+      <NavLink
+        style={({ isActive }) => {
+          return {
+            backgroundColor: isActive ? "blue" : "white",
+            color: isActive ? "white" : "black",
+          };
+        }}
+        to={`/projects/webdev/test-project`}
+      >
+        {" "}
+        Test Project
+      </NavLink>
       <Outlet />
     </>
   );
