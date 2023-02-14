@@ -5,7 +5,7 @@ const SingleProject = () => {
   const { id } = useParams();
   return (
     <>
-      <h2>The Project Number is {id}</h2>
+      <h3>The Project Name is - {id}</h3>
     </>
   );
 };
