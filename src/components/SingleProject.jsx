@@ -1,11 +1,19 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const SingleProject = () => {
+  const navigate = useNavigate();
   const { id } = useParams();
   return (
     <>
       <h3>The Project Name is - {id}</h3>
+      <button
+        onClick={() => {
+          navigate("/dashboard", { state: id });
+        }}
+      >
+        View Project Name in different page
+      </button>
     </>
   );
 };

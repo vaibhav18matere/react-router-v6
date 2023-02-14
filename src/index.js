@@ -7,6 +7,7 @@ import Projects from "./components/Projects";
 import Webdev from "./components/Webdev";
 import Crypto from "./components/Crypto";
 import SingleProject from "./components/SingleProject";
+import Dashboard from "./components/Dashboard";
 import reportWebVitals from "./reportWebVitals";
 
 import {
@@ -32,6 +33,7 @@ root.render(
           </Route>
           <Route path="crypto" element={<Crypto />} />
         </Route>
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </Router>
   </React.StrictMode>
