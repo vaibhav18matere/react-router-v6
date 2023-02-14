@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import Projects from "./components/Projects";
 import Webdev from "./components/Webdev";
 import Crypto from "./components/Crypto";
+import SingleProject from "./components/SingleProject";
 import reportWebVitals from "./reportWebVitals";
 
 import {
@@ -28,6 +29,7 @@ root.render(
         <Route path="projects" element={<Projects />}>
           <Route path="webdev" element={<Webdev />} />
           <Route path="crypto" element={<Crypto />} />
+          <Route path=":id" element={<SingleProject />} />
         </Route>
       </Routes>
     </Router>
